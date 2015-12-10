@@ -61,7 +61,7 @@ The histogram of the total total number of steps taken per day is:
 hist(sum_data$sum,main='Histogram of the total number of steps',xlab='Total number of steps')
 ```
 
-![](figures/unnamed-chunk-3-1.png) 
+![](figure/unnamed-chunk-3-1.png) 
 
 The following code will be used to calculate the mean and median.
 
@@ -79,7 +79,7 @@ data_interval<-ddply(data,.(interval),summarize, mean= mean(steps,na.rm=TRUE))
 plot(data_interval$interval,data_interval$mean,main="Average number of steps by interval",type = "l",xlab='Interval',ylab='Average number of steps')
 ```
 
-![](figures/unnamed-chunk-5-1.png) 
+![](figure/unnamed-chunk-5-1.png) 
 
 The following code will be used to calculate which is the 5-minute interval that contains the maximum number of steps on average.
 
@@ -119,7 +119,7 @@ The histogram of the total total number of steps taken per day of the new data s
 hist(sum_data_withous_NAs$sum,main='Histogram of the total number of steps',xlab='Total number of steps')
 ```
 
-![](figures/unnamed-chunk-10-1.png) 
+![](figure/unnamed-chunk-10-1.png) 
 
 The following code will be used to calculate the mean and median of the new data set.
 
@@ -158,7 +158,7 @@ Finaly we can construct the plot with the average number of steps taken across a
 xyplot(mean ~ interval | factor(weekday), data = mean_data_new, type = "l",ylab="Number of steps",xlab="Interval")
 ```
 
-![](figures/unnamed-chunk-14-1.png) 
+![](figure/unnamed-chunk-14-1.png) 
 
 As can be seen there are plenty differences between the number of steps taken in each interval. For instante in weekends the average number if steps is more homogeneous that in weekdays. 
 
